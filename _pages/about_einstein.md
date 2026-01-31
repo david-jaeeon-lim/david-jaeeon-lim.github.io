@@ -1,5 +1,5 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+**Hayeon Jeong** — MS Student @ [Yonsei University](https://www.yonsei.ac.kr), [MCML Group](https://mcml.yonsei.ac.kr) (Multimedia Computing & Machine Learning). Research interests: diffusion models, generative collapse, adversarial robustness, and person detection.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+**Education:** Yonsei Univ. (MS, 2025–2027) · UC Berkeley (Visiting Student, 2023) · Soongsil Univ. (B.S. EIE, 4.11/4.5 Magna Cum Laude, 2020–2025)
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+**Experience:** MS Student @ MCML, Yonsei (2025–present) · Undergraduate Research Intern @ AI Safety Center, Soongsil (2023–2024)
