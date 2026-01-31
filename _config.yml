@@ -101,7 +101,8 @@ socials:
 
 blog_name: hayeonjeong.github.io # blog_name will be displayed in your blog page
 blog_description: Personal website of Hayeon Jeong
-permalink: /
+# 홈(/)은 about 전용. 블로그는 /blog/ 에만 표시
+permalink: /blog/
 lsi: false # produce an index for related posts
 
 # Pagination
