@@ -1,157 +1,138 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Hayeon Jeong",
+    "label": "MS Student",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "hayeon.jeong@yonsei.ac.kr",
+    "phone": "",
+    "url": "https://hayeonjeong.github.io/",
+    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, at MCML, Yonsei University. My research interests include diffusion models, unified multimodal models in computer vision.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Seoul, Republic of Korea",
+      "postalCode": "",
+      "city": "Seoul",
+      "countryCode": "KR",
+      "region": "Seoul"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "hayeonjeong0727",
+        "url": "https://www.linkedin.com/in/hayeonjeong0727/"
       }
     ]
   },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "institution": "Yonsei University",
+      "location": "Seoul, Republic of Korea",
+      "url": "https://www.yonsei.ac.kr/sites/en_sc/index.do",
+      "area": "School of Integrated Technology",
+      "studyType": "Master of Science",
+      "startDate": "2025-03-01",
+      "endDate": "2027-02-01",
+      "score": "4.0/4.0",
+      "courses": []
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "institution": "University of California, Berkeley",
+      "location": "Berkeley, United States",
+      "url": "https://www.berkeley.edu/",
+      "studyType": "Visiting Student",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-12",
+      "courses": []
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "institution": "Soongsil University",
+      "location": "Seoul, Republic of Korea",
+      "url": "https://webtrans.llsollu.com:40443/ezweb?source=KO&target=EN&profileId=0012d8d1-14e0-4237-a6a5-a68bc015f94d&url=https%3A%2F%2Fssu.ac.kr%2F",
+      "area": "Electronic and Information Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2020-03-03",
+      "endDate": "2025-02-21",
+      "score": "4.11/4.5 (Magna Cum Laude)",
+      "courses": []
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Dominating vs. Dominated: Generative Collapse in Diffusion Models",
+      "publisher": "arXiv",
+      "releaseDate": "2025-12-19",
+      "url": "https://arxiv.org/abs/2512.20666",
+      "summary": "Text-to-image diffusion models have drawn significant attention for their ability to generate diverse and high-fidelity images. However, when generating from multi-concept prompts, one concept token often dominates the generation, suppressing the others-a phenomenon we term the Dominant-vs-Dominated (DvD) imbalance. To systematically analyze this imbalance, we introduce DominanceBench and examine its causes from both data and architectural perspectives. Through various experiments, we show that the limited instance diversity in training data exacerbates the inter-concept interference. Analysis of cross-attention dynamics further reveals that dominant tokens rapidly saturate attention, progressively suppressing others across diffusion timesteps. In addition, head ablation studies show that the DvD behavior arises from distributed attention mechanisms across multiple heads. Our findings provide key insights into generative collapse, advancing toward more reliable and controllable text-to-image generation."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
+      "name": "Infrared Thermal-Guided Adversarial Patch Defense for Robust Visible Person Detectors",
+      "publisher": "IEEE AVSS",
       "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "url": "https://ieeexplore.ieee.org/document/10496143",
+      "summary": "We propose a new method for defending against adversarial patches in visible person detectors. Our method uses infrared thermal information to guide the adversarial patch defense. We show that our method is effective in defending against adversarial patches."
     }
   ],
-  "skills": [
+  "research experience": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Multimedia Computing & Machine Learning (MCML) Group",
+      "position": "MS Student",
+      "url": "https://mcml.yonsei.ac.kr/",
+      "startDate": "2025-03-01",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "name": "AI Safety Center",
+      "position": "Undergraduate Research Intern",
+      "url": "https://aisc.ssu.ac.kr/",
+      "startDate": "2023-06-01",
+      "endDate": "2024-08-31",
+      "summary": "",
+      "highlights": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "Phonetic-Aware Encoder Tuning for L2 Korean ASR",
+      "summary": "Designed and implemented a robust ASR framework to address 'Phonetic Disruption' in non-native (L2) Korean speech. The model enhances the Whisper encoder's acoustic resolution by integrating LoRA adaptation and an auxiliary CTC head for explicit acoustic-phonetic alignment.",
+      "startDate": "2025-09-01",
+      "endDate": "2025-12-31",
+      "url": "https://drive.google.com/file/d/1kqZbzpuM9qS_IGhl1S0CaLlf8Dck-QxD/view?usp=sharing"
+    }
+  ],
+  "honors and awards": [
+    {
+      "title": "Verity Award - Professor's Scholarship",
+      "date": "2024",
+      "awarder": "Soongsil University",
+      "url": "https://drive.google.com/file/d/1-uLwLMrkLTDrF94ExhnD8sOAUElXlal-/view?usp=sharing",
+      "summary": ""
+    },
+    {
+      "title": "Professor's Scholarship (Half Tuition)",
+      "date": "2024",
+      "awarder": "School of Electronic Engineering, Soongsil University",
+      "url": "https://drive.google.com/file/d/18ewjkE930MSBdJYJvkmX_O-MjvtsQa_V/view?usp=sharing",
+      "summary": ""
+    },
+    {
+      "title": "Best Paper Award - KISA President's Award",
+      "date": "2024",
+      "awarder": "Korea Information Security Academic Conference, Chungcheong Branch",
+      "url": "https://drive.google.com/file/d/1-5IotCcrDi-brO-a8M6mAevlBSsTTXtH/view?usp=sharing",
+      "summary": ""
+    },
+    {
+      "title": "Academic Achievement Scholarship (Quarter Tuition)",
+      "date": "2021",
+      "awarder": "Soongsil University",
+      "url": "https://drive.google.com/file/d/18a8BwUrHZGRblE5HJUjZwMrpKXQXu2yc/view?usp=sharing",
+      "summary": "Spring 2021"
     }
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Korean",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -161,40 +142,35 @@
       "icon": ""
     }
   ],
+  "volunteer": [
+    {
+      "organization": "Baird Volunteer Corp (BVC)",
+      "location": "Seoul, Republic of Korea",
+      "position": "Member",
+      "url": "",
+      "startDate": "2020-10-01",
+      "endDate": "2022-02-28",
+      "summary": "Contributed to community safety improvements through CCTV installation project with local police station, and participated in youth education volunteer programs.",
+      "highlights": []
+    }
+  ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
+      "name": "Interests",
+      "icon": "fa-solid fa-heart",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Watching Formula 1 (F1) races",
+        "Playing the piano",
+        "Listening to Jazz music",
+        "Baking cookies"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
+      "name": "Jong-Seok Lee",
       "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "reference": "Jong-Seok Lee is a professor of computer science at Yonsei University. He is a co-author of the paper 'Dominating vs. Dominated: Generative Collapse in Diffusion Models'."
     }
   ]
 }
