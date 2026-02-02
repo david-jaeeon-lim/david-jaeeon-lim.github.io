@@ -6,21 +6,11 @@ subtitle: MS Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: false
   more_info: >
     <p>hayeon.jeong@yonsei.ac.kr</p>
     <p>Seoul, Republic of Korea</p>
-
-# people 탭에 있던 프로필 카드 (홈 페이지 맨 위에 표시)
-profiles:
-  - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false
-    more_info: >
-      <p>hayeon.jeong@yonsei.ac.kr</p>
-      <p>Seoul, Republic of Korea</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -36,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** group at Yonsei University, at [MCML](https://mcml.yonsei.ac.kr), Yonsei University. My research interests include **diffusion models**, **generative collapse**, and **adversarial robustness** in computer vision.
+I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en). My research interests include **diffusion models**, **multi-modal models** in computer vision.
 
 **Education**
 - **Yonsei University** — School of Integrated Technology, Master's degree (Mar 2025 – Feb 2027)
