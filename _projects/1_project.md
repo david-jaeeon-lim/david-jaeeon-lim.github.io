@@ -1,81 +1,99 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: "Phonetic-Aware Encoder Tuning"
+description: "Boosting ASR Robustness against L2 Pronunciation Variations via CTC Supervision"
+img: assets/img/projects/phonetic_thumnail.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Abstract
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+While large-scale pre-trained Automatic Speech Recognition (ASR) models like OpenAI's Whisper have achieved near-human performance on native speech, they often struggle with **non-native (L2) speech**. This is primarily due to **"Phonetic Disruption"**, where a speaker's native language (L1) interference leads to acoustic variations that deviate from standard pronunciation. In this project, we propose a **Phonetic-Aware Encoder Tuning** framework that leverages **LoRA (Low-Rank Adaptation)** and an auxiliary **CTC (Connectionist Temporal Classification)** head to enhance the encoder's acoustic resolution for L2 Korean speech.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
+
+## The Challenge: Phonetic Disruption in L2 Speech
+
+L2 speakers often substitute target language phonemes with the most similar sounds from their native inventory. For instance:
+* **Japanese (JP) speakers** may struggle with Korean nasal codas and stop/fricative distinctions.
+* **Chinese (CN) speakers** often face challenges with specific vowel heights (e.g., [u] vs [o]).
+* **Vietnamese (VN) speakers** frequently omit final consonants or mispronounce glottal fricatives.
+
+To address these, our model must go beyond simple transcript mapping and learn the fine-grained acoustic-phonetic alignments of L2 speech.
+
+---
+
+## Proposed Methodology
+
+### 1. Encoder-only LoRA Adaptation
+Rather than fine-tuning the entire Whisper model—which could lead to catastrophic forgetting of its vast linguistic knowledge—we apply **LoRA** specifically to the **Encoder** blocks. This allows the model to adapt its feature extraction process to L2-specific acoustic patterns while keeping the pre-trained Decoder weights frozen.
+
+### 2. Auxiliary CTC Supervision
+We introduce an auxiliary **CTC Head** attached to the last layer of the Encoder. The objective function is a multi-task loss:
+
+$$\mathcal{L}_{total} = \mathcal{L}_{Whisper\_Decoder} + \lambda \mathcal{L}_{CTC}$$
+
+The CTC loss provides an explicit frame-level alignment signal, forcing the encoder to capture precise phonetic boundaries. This module is discarded during inference, ensuring no additional computational cost.
+
+### 3. Comparing Phonetic Representations
+We investigated which representation best guides the encoder:
+* **Phonetic Hangul (g2pk2)**: Transcribing based on actual pronunciation rules.
+* **Yale Romanization**: A morpho-phonemic representation of Korean.
+* **International Phonetic Alphabet (IPA)**: Providing universal, fine-grained articulatory information.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/model_architecture.png" title="Proposed Framework" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Figure 1: Overview of the proposed Phonetic-Aware Encoder Tuning with CTC LoRA. (Use <b>Figure 1</b> from your report)
 </div>
+
+---
+
+## Experimental Setup
+
+* **Dataset**: AI Hub "Speech Data for Korean Language Learners" (Japanese, Chinese, and Vietnamese speakers).
+* **Base Model**: Whisper-small.
+* **Implementation**: HuggingFace Transformers with PEFT (LoRA).
+
+---
+
+## Results and Analysis
+
+### Quantitative Performance
+Our experiments show that **IPA-based supervision** consistently outperforms other methods across different L1 groups.
+
+| Model | JP (CER↓) | CN (CER↓) | VN (CER↓) |
+| :--- | :---: | :---: | :---: |
+| Whisper Original | 0.0822 | 0.1171 | 0.1247 |
+| **LoRA + IPA CTC** | **0.0768** | **0.1044** | **0.1149** |
+
+### Phonetic Error Mitigation
+By analyzing the confusion matrices, we observed that our method significantly reduces specific L1-induced errors:
+
+* **Vowel Distinctions**: Improved accuracy in distinguishing [u] and [o] for Chinese speakers.
+* **Coda Restoration**: Successful recognition of final nasals ([M], [N], [NG]) which are often confused by Japanese speakers.
+* **Fricative Accuracy**: Enhanced detection of [H] and tense/lax consonant distinctions.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/error_matrix.png" title="Error Change Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Figure 2: Top 20 phonetic error reduction patterns. Negative values indicate a decrease in errors compared to the baseline. (Use <b>Figure 2</b> from your report)
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Conclusion
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+Our study demonstrates that providing **explicit phonetic guidance** through an auxiliary CTC task is a powerful strategy for adapting ASR models to non-native speech. By focusing the adaptation on the **Encoder** via LoRA, we successfully boosted robustness against L2 pronunciation variations without sacrificing the model's general language modeling capabilities.
 
-{% raw %}
+Future work will involve exploring more diverse L1 groups and investigating the impact of noise-robust phonetic targets.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+---

@@ -36,5 +36,3 @@ I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** gro
 **Experience**
 - **MS Student**, [MCML](https://mcml.yonsei.ac.kr), Yonsei University (Mar 2025 – Present)
 - **Undergraduate Research Intern**, AI Safety Center, Soongsil University (Jun 2023 – Aug 2024)
-
-Recent work includes *Dominating vs. Dominated: Generative Collapse in Diffusion Models* (arXiv 2025) and *Infrared Thermal-Guided Adversarial Patch Defense for Robust Visible Person Detectors* (IEEE AVSS 2025). See [publications](/publications/) and [Google Scholar](https://scholar.google.com/citations?user=3BPlPxAAAAAJ) for more.
