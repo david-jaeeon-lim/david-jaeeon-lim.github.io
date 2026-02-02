@@ -4,7 +4,7 @@ title: "Phonetic-Aware Encoder Tuning"
 description: "Boosting ASR Robustness against L2 Pronunciation Variations via CTC Supervision"
 img: assets/img/projects/1_phonetic/phonetic_thumnail.png
 importance: 1
-category: work
+category: 2025
 related_publications: true
 ---
 
