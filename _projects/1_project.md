@@ -1,4 +1,5 @@
 ---
+
 layout: page
 title: "Phonetic-Aware Encoder Tuning"
 description: "Boosting ASR Robustness against L2 Pronunciation Variations via CTC Supervision"
@@ -6,94 +7,177 @@ img: assets/img/projects/1_phonetic/phonetic_thumnail.png
 importance: 1
 category: 2025
 related_publications: true
----
+--------------------------
 
-## Abstract
+## Overview
 
-While large-scale pre-trained Automatic Speech Recognition (ASR) models like OpenAI's Whisper have achieved near-human performance on native speech, they often struggle with **non-native (L2) speech**. This is primarily due to **"Phonetic Disruption"**, where a speaker's native language (L1) interference leads to acoustic variations that deviate from standard pronunciation. In this project, we propose a **Phonetic-Aware Encoder Tuning** framework that leverages **LoRA (Low-Rank Adaptation)** and an auxiliary **CTC (Connectionist Temporal Classification)** head to enhance the encoder's acoustic resolution for L2 Korean speech.
+Automatic Speech Recognition (ASR) systems based on large-scale pre-trained models have reached near-human performance for **native speech**. However, their robustness drops significantly when faced with **non-native (L2) speech**. This gap is not merely a data sparsity issue—it originates from systematic **phonetic mismatches** between how L2 speakers articulate sounds and how ASR models internally represent them.
 
----
-
-## The Challenge: Phonetic Disruption in L2 Speech
-
-L2 speakers often substitute target language phonemes with the most similar sounds from their native inventory. For instance:
-* **Japanese (JP) speakers** may struggle with Korean nasal codas and stop/fricative distinctions.
-* **Chinese (CN) speakers** often face challenges with specific vowel heights (e.g., [u] vs [o]).
-* **Vietnamese (VN) speakers** frequently omit final consonants or mispronounce glottal fricatives.
-
-To address these, our model must go beyond simple transcript mapping and learn the fine-grained acoustic-phonetic alignments of L2 speech.
+This project introduces **Phonetic-Aware Encoder Tuning**, a framework designed to explicitly correct such mismatches by improving the *acoustic–phonetic resolution* of the encoder in Whisper-style ASR models. Instead of modifying the entire model, we focus on **encoder-only adaptation via LoRA**, guided by **auxiliary phonetic CTC supervision**.
 
 ---
 
-## Proposed Methodology
+## Motivation: Why L2 Speech Breaks Modern ASR
 
-### 1. Encoder-only LoRA Adaptation
-Rather than fine-tuning the entire Whisper model—which could lead to catastrophic forgetting of its vast linguistic knowledge—we apply **LoRA** specifically to the **Encoder** blocks. This allows the model to adapt its feature extraction process to L2-specific acoustic patterns while keeping the pre-trained Decoder weights frozen.
+L2 speakers often map unfamiliar phonemes in the target language to the closest sounds available in their native inventory. This phenomenon—commonly referred to as **L1 interference**—produces systematic pronunciation patterns that deviate from native norms.
 
-### 2. Auxiliary CTC Supervision
-We introduce an auxiliary **CTC Head** attached to the last layer of the Encoder. The objective function is a multi-task loss:
+For Korean L2 speech, these patterns vary strongly by native language:
 
-$$\mathcal{L}_{total} = \mathcal{L}_{Whisper\_Decoder} + \lambda \mathcal{L}_{CTC}$$
+* **Japanese (JP)** speakers struggle with Korean nasal codas and stop–fricative contrasts due to open-syllable constraints in Japanese.
+* **Chinese (CN)** speakers frequently confuse vowel height (e.g., /u/ vs. /o/) and labial codas.
+* **Vietnamese (VN)** speakers tend to weaken fricatives and misalign vowel height due to a dense vowel inventory.
 
-The CTC loss provides an explicit frame-level alignment signal, forcing the encoder to capture precise phonetic boundaries. This module is discarded during inference, ensuring no additional computational cost.
+Crucially, these errors emerge **before linguistic decoding**, at the level of acoustic representation and alignment. This suggests that improving the **encoder**, rather than the decoder, is the most principled intervention point.
 
-### 3. Comparing Phonetic Representations
-We investigated which representation best guides the encoder:
-* **Phonetic Hangul (g2pk2)**: Transcribing based on actual pronunciation rules.
-* **Yale Romanization**: A morpho-phonemic representation of Korean.
-* **International Phonetic Alphabet (IPA)**: Providing universal, fine-grained articulatory information.
+---
+
+## Key Idea: Phonetic-Aware Encoder Tuning
+
+Our central hypothesis is simple:
+
+> *If the encoder is explicitly guided to align distorted L2 acoustics with correct phonetic categories, the downstream ASR output will improve—even without modifying the decoder.*
+
+To operationalize this idea, we propose a multi-task framework with three core components:
+
+---
+
+## Methodology
+
+### 1. Encoder-Only LoRA Adaptation
+
+Rather than fine-tuning the full Whisper model, we apply **Low-Rank Adaptation (LoRA)** *exclusively* to the **encoder blocks**, while keeping the decoder frozen.
+
+This design choice has two advantages:
+
+* It preserves the strong linguistic priors already learned by the decoder, avoiding catastrophic forgetting.
+* It allows efficient adaptation to L2-specific acoustic distortions with minimal additional parameters.
+
+The encoder thus learns to reshape its acoustic feature space without altering high-level language modeling behavior.
+
+---
+
+### 2. Auxiliary Phonetic CTC Supervision
+
+To provide direct acoustic–phonetic guidance, we attach a lightweight **CTC head** to the final encoder layer during training.
+
+The model is trained with a multi-task objective:
+
+$$
+\mathcal{L}*{total} = \mathcal{L}*{ASR} + \lambda , \mathcal{L}_{CTC}
+$$
+
+* **ASR loss**: standard Whisper decoder loss
+* **CTC loss**: frame-level phonetic alignment
+
+CTC is particularly well-suited for L2 speech because it:
+
+* Enforces monotonic alignment without requiring exact frame labels
+* Handles irregular phoneme durations common in non-native speech
+
+Importantly, the CTC head is **removed at inference time**, so there is **no additional runtime cost**.
+
+---
+
+### 3. Choosing the Right Phonetic Target
+
+We investigate three alternative phonetic representations as CTC targets:
+
+* **Phonetic Hangul (g2pk2)**
+  Reflects surface pronunciation after Korean phonological rules; effective for sub-syllabic structure errors.
+
+* **Yale Romanization**
+  A morpho-phonemic representation commonly used in linguistics; provides a structured but abstract phoneme mapping.
+
+* **International Phonetic Alphabet (IPA)**
+  A fine-grained articulatory representation capturing aspiration, tenseness, and vowel height.
+
+Among these, **IPA provides the most explicit phonetic supervision**, making it particularly effective for resolving subtle L2 pronunciation errors.
+
+---
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/1_phonetic/model_architecture.png" title="Proposed Framework" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/1_phonetic/model_architecture.png" title="Proposed Framework" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 <div class="caption">
-    Figure 1: Overview of the proposed Phonetic-Aware Encoder Tuning with CTC LoRA. (Use <b>Figure 1</b> from your report)
+Figure 1: Phonetic-Aware Encoder Tuning with LoRA and auxiliary CTC supervision.
 </div>
 
 ---
 
 ## Experimental Setup
 
-* **Dataset**: AI Hub "Speech Data for Korean Language Learners" (Japanese, Chinese, and Vietnamese speakers).
-* **Base Model**: Whisper-small.
-* **Implementation**: HuggingFace Transformers with PEFT (LoRA).
+* **Dataset**: NIKL Korean Learner Corpus (JP, CN, VN speakers)
+* **Audio Generation**: XTTS-based L2 speech synthesis from non-standard transcriptions
+* **Ground Truth Normalization**: Context-aware correction using LLM-based reconstruction
+* **Base Model**: Whisper-small
+* **Training**: Encoder-only LoRA + multi-task CTC learning
+* **Metrics**: Character Error Rate (CER) and Jamo-level CER
+
+Jamo-CER is especially important for Korean, as it captures partial phonetic mismatches that are invisible at the syllable level.
 
 ---
 
-## Results and Analysis
+## Results
 
 ### Quantitative Performance
-Our experiments show that **IPA-based supervision** consistently outperforms other methods across different L1 groups.
 
-| Model | JP (CER↓) | CN (CER↓) | VN (CER↓) |
-| :--- | :---: | :---: | :---: |
-| Whisper Original | 0.0822 | 0.1171 | 0.1247 |
+Across all L1 groups, **IPA-based CTC supervision consistently achieves the strongest improvements**, particularly for Chinese and Vietnamese speakers.
+
+| Model              |  JP (CER↓) |  CN (CER↓) |  VN (CER↓) |
+| ------------------ | ---------: | ---------: | ---------: |
+| Whisper (Base)     |     0.0822 |     0.1171 |     0.1247 |
 | **LoRA + IPA CTC** | **0.0768** | **0.1044** | **0.1149** |
 
-### Phonetic Error Mitigation
-By analyzing the confusion matrices, we observed that our method significantly reduces specific L1-induced errors:
+---
 
-* **Vowel Distinctions**: Improved accuracy in distinguishing [u] and [o] for Chinese speakers.
-* **Coda Restoration**: Successful recognition of final nasals ([M], [N], [NG]) which are often confused by Japanese speakers.
-* **Fricative Accuracy**: Enhanced detection of [H] and tense/lax consonant distinctions.
+### Phonetic Error Reduction
+
+Error-change analysis reveals that the proposed method directly corrects **L1-specific phonetic failure modes**:
+
+* **Japanese**: Improved distinction of nasal codas (/ŋ/, /n/, /m/) and stop–fricative boundaries
+* **Chinese**: Robust recovery of vowel height contrasts (/u/ vs. /o/) and labial codas
+* **Vietnamese**: Sharper alignment of vowel height and fricative articulation
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/1_phonetic/error_matrix.png" title="Error Change Matrix" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/1_phonetic/error_matrix.png" title="Error Change Matrix" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 <div class="caption">
-    Figure 2: Top 20 phonetic error reduction patterns. Negative values indicate a decrease in errors compared to the baseline. (Use <b>Figure 2</b> from your report)
+Figure 2: Top phonetic error reductions after phonetic-aware encoder tuning.
 </div>
+
+---
+
+## What Actually Changed?
+
+Forced-alignment analysis shows a qualitative shift in encoder behavior:
+
+* **Baseline Whisper** produces diffused, unstable phonetic probabilities
+* **Phonetic-aware tuning** yields sharp, well-aligned peaks at correct phoneme timestamps
+
+This confirms that the improvement is not merely linguistic post-processing, but a **fundamental correction of acoustic interpretation**.
 
 ---
 
 ## Conclusion
 
-Our study demonstrates that providing **explicit phonetic guidance** through an auxiliary CTC task is a powerful strategy for adapting ASR models to non-native speech. By focusing the adaptation on the **Encoder** via LoRA, we successfully boosted robustness against L2 pronunciation variations without sacrificing the model's general language modeling capabilities.
+This work demonstrates that **explicit phonetic supervision at the encoder level** is a powerful and efficient strategy for improving ASR robustness to L2 speech.
 
-Future work will involve exploring more diverse L1 groups and investigating the impact of noise-robust phonetic targets.
+By combining:
+
+* Encoder-only LoRA adaptation
+* Auxiliary CTC-based phonetic alignment
+* Carefully chosen phonetic targets (IPA)
+
+we achieve consistent gains without increasing inference cost or compromising native-speech performance.
 
 ---
+
+## Future Directions
+
+* Expanding to additional L1 groups and real (non-synthetic) L2 audio
+* Exploring noise-robust and articulatory-feature-based phonetic targets
+* Applying phonetic-aware tuning to multilingual and streaming ASR models
