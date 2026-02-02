@@ -2,7 +2,7 @@
 layout: page
 title: "Phonetic-Aware Encoder Tuning"
 description: "Boosting ASR Robustness against L2 Pronunciation Variations via CTC Supervision"
-img: assets/img/projects/phonetic_thumnail.jpg
+img: assets/img/projects/1_phonetic/phonetic_thumnail.png
 importance: 1
 category: work
 related_publications: true
@@ -45,7 +45,7 @@ We investigated which representation best guides the encoder:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/model_architecture.png" title="Proposed Framework" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/1_phonetic/model_architecture.png" title="Proposed Framework" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -81,7 +81,7 @@ By analyzing the confusion matrices, we observed that our method significantly r
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/error_matrix.png" title="Error Change Matrix" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/1_phonetic/error_matrix.png" title="Error Change Matrix" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
