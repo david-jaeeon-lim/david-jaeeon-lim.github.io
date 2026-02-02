@@ -6,7 +6,7 @@
     "email": "hayeon.jeong@yonsei.ac.kr",
     "phone": "",
     "url": "https://hayeonjeong.github.io/",
-    "summary": "I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en). My research interests include **diffusion models**, **multi-modal models** in computer vision.",
+    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by Prof. Jong-Seok Lee. My research interests include Diffusion Models, Unfied Multi-Modal Models in Computer Vision.",
     "location": {
       "address": "Seoul, Republic of Korea",
       "postalCode": "",
@@ -24,51 +24,35 @@
   },
   "education": [
     {
-      "institution": "Yonsei University",
+      "institution": "Master of Science",
       "location": "Seoul, Republic of Korea",
       "url": "https://www.yonsei.ac.kr/sites/en_sc/index.do",
       "area": "School of Integrated Technology",
-      "studyType": "Master of Science",
+      "studyType": "Yonsei University",
       "startDate": "2025-03-01",
       "endDate": "2027-02-01",
       "score": "4.0/4.0",
       "courses": []
     },
     {
-      "institution": "University of California, Berkeley",
+      "institution": "Visiting Student",
       "location": "Berkeley, United States",
       "url": "https://www.berkeley.edu/",
-      "studyType": "Visiting Student",
+      "studyType": "University of California, Berkeley",
       "startDate": "2023-01-10",
       "endDate": "2023-05-12",
       "courses": []
     },
     {
-      "institution": "Soongsil University",
+      "institution": "Bachelor of Science",
       "location": "Seoul, Republic of Korea",
       "url": "https://webtrans.llsollu.com:40443/ezweb?source=KO&target=EN&profileId=0012d8d1-14e0-4237-a6a5-a68bc015f94d&url=https%3A%2F%2Fssu.ac.kr%2F",
       "area": "Electronic and Information Engineering",
-      "studyType": "Bachelor of Science",
+      "studyType": "Soongsil University",
       "startDate": "2020-03-03",
       "endDate": "2025-02-21",
       "score": "4.11/4.5 (Magna Cum Laude)",
       "courses": []
-    }
-  ],
-  "publications": [
-    {
-      "name": "Dominating vs. Dominated: Generative Collapse in Diffusion Models",
-      "publisher": "arXiv",
-      "releaseDate": "2025-12-19",
-      "url": "https://arxiv.org/abs/2512.20666",
-      "summary": "Text-to-image diffusion models have drawn significant attention for their ability to generate diverse and high-fidelity images. However, when generating from multi-concept prompts, one concept token often dominates the generation, suppressing the others-a phenomenon we term the Dominant-vs-Dominated (DvD) imbalance. To systematically analyze this imbalance, we introduce DominanceBench and examine its causes from both data and architectural perspectives. Through various experiments, we show that the limited instance diversity in training data exacerbates the inter-concept interference. Analysis of cross-attention dynamics further reveals that dominant tokens rapidly saturate attention, progressively suppressing others across diffusion timesteps. In addition, head ablation studies show that the DvD behavior arises from distributed attention mechanisms across multiple heads. Our findings provide key insights into generative collapse, advancing toward more reliable and controllable text-to-image generation."
-    },
-    {
-      "name": "Infrared Thermal-Guided Adversarial Patch Defense for Robust Visible Person Detectors",
-      "publisher": "IEEE AVSS",
-      "releaseDate": "1905-03-18",
-      "url": "https://ieeexplore.ieee.org/document/10496143",
-      "summary": "We propose a new method for defending against adversarial patches in visible person detectors. Our method uses infrared thermal information to guide the adversarial patch defense. We show that our method is effective in defending against adversarial patches."
     }
   ],
   "research experience": [
@@ -91,10 +75,26 @@
       "highlights": []
     }
   ],
+  "publications": [
+    {
+      "name": "Dominating vs. Dominated: Generative Collapse in Diffusion Models",
+      "publisher": "arXiv",
+      "releaseDate": "2025-12-19",
+      "url": "https://arxiv.org/abs/2512.20666",
+      "summary": "We identify and analyze the Dominant-vs-Dominated (DvD) imbalance in text-to-image diffusion models, where one concept suppresses others in multi-concept generation. Through a systematic benchmark and attention-level analysis, we show that this behavior arises from limited data diversity and distributed cross-attention mechanisms, providing insights toward more reliable and controllable image generation."
+    },
+    {
+      "name": "Infrared Thermal-Guided Adversarial Patch Defense for Robust Visible Person Detectors",
+      "publisher": "IEEE AVSS, 2025",
+      "releaseDate": "2025-08-11",
+      "url": "https://ieeexplore.ieee.org/document/10496143",
+      "summary": "We propose a defense against adversarial patch attacks on visible person detectors by leveraging infrared thermal information. By exploiting thermal differences between humans and adversarial patches, our method effectively detects and mitigates physical attacks while preserving performance on clean images."
+    }
+  ],
   "projects": [
     {
       "name": "Phonetic-Aware Encoder Tuning for L2 Korean ASR",
-      "summary": "Designed and implemented a robust ASR framework to address 'Phonetic Disruption' in non-native (L2) Korean speech. The model enhances the Whisper encoder's acoustic resolution by integrating LoRA adaptation and an auxiliary CTC head for explicit acoustic-phonetic alignment.",
+      "summary": "Designed a robust ASR framework mitigating phonetic disruption in non-native Korean speech via LoRA-adapted Whisper encoder and auxiliary CTC-based phonetic supervision.",
       "startDate": "2025-09-01",
       "endDate": "2025-12-31",
       "url": "https://drive.google.com/file/d/1kqZbzpuM9qS_IGhl1S0CaLlf8Dck-QxD/view?usp=sharing"
@@ -102,32 +102,28 @@
   ],
   "honors and awards": [
     {
-      "title": "Verity Award - Professor's Scholarship",
+      "title": "Best Paper Award (KISA President)",
       "date": "2024",
-      "awarder": "Soongsil University",
-      "url": "https://drive.google.com/file/d/1-uLwLMrkLTDrF94ExhnD8sOAUElXlal-/view?usp=sharing",
+      "awarder": "KIISC Chungcheong Chapter Conference",
       "summary": ""
     },
     {
-      "title": "Professor's Scholarship (Half Tuition)",
+      "title": "Professor’s Scholarship (Half Tuition)",
       "date": "2024",
       "awarder": "School of Electronic Engineering, Soongsil University",
-      "url": "https://drive.google.com/file/d/18ewjkE930MSBdJYJvkmX_O-MjvtsQa_V/view?usp=sharing",
       "summary": ""
     },
     {
-      "title": "Best Paper Award - KISA President's Award",
+      "title": "Verity Award – Professor’s Scholarship (Quarter Tuition)",
       "date": "2024",
-      "awarder": "Korea Information Security Academic Conference, Chungcheong Branch",
-      "url": "https://drive.google.com/file/d/1-5IotCcrDi-brO-a8M6mAevlBSsTTXtH/view?usp=sharing",
+      "awarder": "Soongsil University",
       "summary": ""
     },
     {
       "title": "Academic Achievement Scholarship (Quarter Tuition)",
       "date": "2021",
       "awarder": "Soongsil University",
-      "url": "https://drive.google.com/file/d/18a8BwUrHZGRblE5HJUjZwMrpKXQXu2yc/view?usp=sharing",
-      "summary": "Spring 2021"
+      "summary": ""
     }
   ],
   "languages": [
@@ -156,14 +152,20 @@
   ],
   "interests": [
     {
-      "name": "Interests",
-      "icon": "fa-solid fa-heart",
-      "keywords": [
-        "Watching Formula 1 (F1) races",
-        "Playing the piano",
-        "Listening to Jazz music",
-        "Baking cookies"
-      ]
+      "name": "Watching Formula 1 (F1) races",
+      "icon": "fa-solid fa-car"
+    },
+    {
+      "name": "Playing the piano",
+      "icon": "fa-solid fa-piano"
+    },
+    {
+      "name": "Listening to Jazz music",
+      "icon": "fa-solid fa-music"
+    },
+    {
+      "name": "Baking cookies",
+      "icon": "fa-solid fa-cookie"
     }
   ],
   "references": [
