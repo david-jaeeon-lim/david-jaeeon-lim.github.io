@@ -9,13 +9,13 @@
 # arxiv_id: # your arXiv author ID
 # blogger_url: # your blogger URL
 # bluesky_url: # your bluesky URL
-cv_pdf: /assets/pdf/CV.pdf # path to your CV PDF file
+cv_pdf:  # path to your CV PDF file
 # dblp_url: # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
-email: hayeon.jeong@yonsei.ac.kr # your email address
+email: david98111@yonsei.ac.kr # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
-github_username: HayeonJeong # your GitHub user name
+github_username:  # your GitHub user name
 # gitlab_username: # your GitLab user name
 # hal_id: # your HAL id (https://hal.science/)
 # ieee_id: # your ieeexplore.ieee.org/author/id
@@ -26,7 +26,7 @@ github_username: HayeonJeong # your GitHub user name
 # lastfm_id: # your lastfm id
 # lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 # leetcode_id: # your LeetCode id
-linkedin_username: hayeonjeong0727 # your LinkedIn user name
+linkedin_username: jaeeon-lim-7341b625b # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
 # orcid_id: # your ORCID ID
@@ -35,8 +35,8 @@ linkedin_username: hayeonjeong0727 # your LinkedIn user name
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
-rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: 3BPlPxAAAAAJ&hl # your Google Scholar ID
+rss_icon: false # comment this line to hide the RSS icon
+scholar_userid:  # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id
