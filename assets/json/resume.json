@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Hayeon Jeong",
+    "name": "Jaeeon Lim",
     "label": "MS Student",
     "image": "",
-    "email": "hayeon.jeong@yonsei.ac.kr",
+    "email": "",
     "phone": "",
-    "url": "https://hayeonjeong.github.io/",
-    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by Prof. Jong-Seok Lee. My research interests include Diffusion Models, Unfied Multi-Modal Models in Computer Vision.",
+    "url": "",
+    "summary": "",
     "location": {
       "address": "Seoul, Republic of Korea",
       "postalCode": "",
@@ -24,53 +24,64 @@
   },
   "education": [
     {
-      "institution": "Master of Science",
+      "institution": "Yonsei University",
       "location": "Seoul, Republic of Korea",
       "url": "https://www.yonsei.ac.kr/sites/en_sc/index.do",
-      "area": "School of Integrated Technology",
-      "studyType": "Yonsei University",
-      "startDate": "2025-03-01",
-      "endDate": "2027-02-01",
-      "score": "4.0/4.0",
+      "area": "Materials Science and Engineering",
+      "studyType": "Master of Science",
+      "startDate": "2024-09-01",
+      "endDate": "2026-08-31",
+      "score": "",
       "courses": []
     },
     {
-      "institution": "Visiting Student",
+      "institution": "University of California, Berkeley",
       "location": "Berkeley, United States",
       "url": "https://www.berkeley.edu/",
-      "studyType": "University of California, Berkeley",
-      "startDate": "2023-01-10",
-      "endDate": "2023-05-12",
+      "area": "",
+      "studyType": "Exchange Undergraduate Student",
+      "startDate": "2022-08-01",
+      "endDate": "2023-05-31",
+      "score": "",
       "courses": []
     },
     {
-      "institution": "Bachelor of Science",
+      "institution": "Yonsei University",
       "location": "Seoul, Republic of Korea",
-      "url": "https://webtrans.llsollu.com:40443/ezweb?source=KO&target=EN&profileId=0012d8d1-14e0-4237-a6a5-a68bc015f94d&url=https%3A%2F%2Fssu.ac.kr%2F",
-      "area": "Electronic and Information Engineering",
-      "studyType": "Soongsil University",
-      "startDate": "2020-03-03",
-      "endDate": "2025-02-21",
-      "score": "4.11/4.5 (Magna Cum Laude)",
+      "url": "https://www.yonsei.ac.kr/sites/en_sc/index.do",
+      "area": "Materials Science and Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2018-03-01",
+      "endDate": "2024-08-31",
+      "score": "",
       "courses": []
     }
   ],
   "research experience": [
     {
-      "name": "Multimedia Computing & Machine Learning (MCML) Group",
-      "position": "MS Student",
-      "url": "https://mcml.yonsei.ac.kr/",
-      "startDate": "2025-03-01",
-      "endDate": "Present",
+      "name": "Nano Functional Material Laboratory (NFML)",
+      "position": "M.S. Student",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
       "summary": "",
       "highlights": []
     },
     {
-      "name": "AI Safety Center",
+      "name": "Nano Functional Material Laboratory (NFML)",
       "position": "Undergraduate Research Intern",
-      "url": "https://aisc.ssu.ac.kr/",
-      "startDate": "2023-06-01",
+      "url": "",
+      "startDate": "2023-09-01",
       "endDate": "2024-08-31",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "name": "UC Berkeley",
+      "position": "Undergraduate Research Intern",
+      "url": "",
+      "startDate": "2023-01-01",
+      "endDate": "2023-05-31",
       "summary": "",
       "highlights": []
     }

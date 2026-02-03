@@ -3,13 +3,13 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Hayeon
+first_name: Jaeeon
 middle_name: 
-last_name: Jeong
+last_name: Lim
 contact_note: >
-  Email (hayeon.jeong@yonsei.ac.kr) is the best way to reach me.
+  Email is the best way to reach me.
 description: >
-  Hayeon Jeong — MS Student at Yonsei University (MCML Group). Research interests: diffusion models, generative collapse, adversarial robustness.
+  Jaeeon Lim — MS Student at Yonsei University. Materials Science and Engineering.
 keywords: machine learning, diffusion models, computer vision, Yonsei University, MCML
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
