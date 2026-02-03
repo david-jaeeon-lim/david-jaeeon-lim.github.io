@@ -72,7 +72,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 # For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
 # and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
-google_analytics: G-JGTHCRQ64N # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics: G-HEZSF68M10 # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
@@ -86,10 +86,10 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 socials:
-  email: hayeon.jeong@yonsei.ac.kr
+  email: david98111@yonsei.ac.kr
   google_scholar_id: 3BPlPxAAAAAJ&hl
-  github_username: hayeonjeong
-  linkedin_username: hayeonjeong0727
+  github_username:
+  linkedin_username: jaeeon-lim-7341b625b
   twitter_username: 
   orcid_id: 0009-0008-1892-0645
   scholar_userid: 3BPlPxAAAAAJ&hl

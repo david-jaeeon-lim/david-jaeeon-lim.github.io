@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: MS Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a>, <a href="https://mcml.yonsei.ac.kr" target="_blank">MCML Group</a> · Seoul, Korea
+subtitle: MS Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a>, <a href="https://nfml.yonsei.ac.kr/" target="_blank">Nano Functional Material Laboratory (NFML)</a> · Seoul, Korea
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>hayeon.jeong@yonsei.ac.kr</p>
+    <p>david98111@yonsei.ac.kr</p>
     <p>Seoul, Republic of Korea</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -27,13 +27,14 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en). My research interests include **diffusion models**, **multi-modal models** in computer vision.
+I am an MS student in the **Department of Materials Science and Engineering** at Yonsei University, advised by [Prof. Jooho Moon](https://scholar.google.com/citations?user=z7LXkQoAAAAJ&hl=en). My research interests include XXXXX.
 
 **Education**
-- **Yonsei University** — School of Integrated Technology, Master's degree (Mar 2025 – Feb 2027)
-- **UC Berkeley** — Computer Science, Visiting Student (Jan 2023 – May 2023)
-- **Soongsil University** — Electronic and Information Engineering, B.S. (Mar 2020 – Feb 2025), GPA 4.11/4.5 (Magna Cum Laude)
+- **Yonsei University** — Materials Science and Engineering, M.S. (Sep 2024 – Aug 2026)
+- **UC Berkeley** — Exchange Undergraduate Student (Aug 2022 – May 2023)
+- **Yonsei University** — Materials Science and Engineering, B.S. (Mar 2018 – Aug 2024)
 
 **Experience**
-- **MS Student**, [MCML](https://mcml.yonsei.ac.kr), Yonsei University (Mar 2025 – Present)
-- **Undergraduate Research Intern**, AI Safety Center, Soongsil University (Jun 2023 – Aug 2024)
+- **M.S. Student**, [Nano Functional Material Laboratory (NFML)](https://nfml.yonsei.ac.kr/), Yonsei University
+- **Undergraduate Research Intern**, Nano Functional Material Laboratory (NFML), Yonsei University (Sep 2023 – Aug 2024)
+- **Undergraduate Research Intern**, UC Berkeley (Jan 2023 – May 2023)

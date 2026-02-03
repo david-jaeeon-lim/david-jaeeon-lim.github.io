@@ -3,7 +3,7 @@
     "name": "Jaeeon Lim",
     "label": "MS Student",
     "image": "",
-    "email": "",
+    "email": "david98111@yonsei.ac.kr",
     "phone": "",
     "url": "",
     "summary": "",
@@ -17,8 +17,8 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "hayeonjeong0727",
-        "url": "https://www.linkedin.com/in/hayeonjeong0727/"
+        "username": "jaeeon-lim-7341b625b",
+        "url": "https://www.linkedin.com/in/jaeeon-lim-7341b625b/"
       }
     ]
   },
@@ -88,52 +88,27 @@
   ],
   "publications": [
     {
-      "name": "Dominating vs. Dominated: Generative Collapse in Diffusion Models",
+      "name": "XXXXX",
       "publisher": "arXiv",
-      "releaseDate": "2025-12-19",
-      "url": "https://arxiv.org/abs/2512.20666",
-      "summary": "We identify and analyze the Dominant-vs-Dominated (DvD) imbalance in text-to-image diffusion models, where one concept suppresses others in multi-concept generation. Through a systematic benchmark and attention-level analysis, we show that this behavior arises from limited data diversity and distributed cross-attention mechanisms, providing insights toward more reliable and controllable image generation."
-    },
-    {
-      "name": "Infrared Thermal-Guided Adversarial Patch Defense for Robust Visible Person Detectors",
-      "publisher": "IEEE AVSS, 2025",
-      "releaseDate": "2025-08-11",
-      "url": "https://ieeexplore.ieee.org/document/10496143",
-      "summary": "We propose a defense against adversarial patch attacks on visible person detectors by leveraging infrared thermal information. By exploiting thermal differences between humans and adversarial patches, our method effectively detects and mitigates physical attacks while preserving performance on clean images."
+      "releaseDate": "YYYY-MM-DD",
+      "url": "XXXX",
+      "summary": "XXXX"
     }
   ],
   "projects": [
     {
-      "name": "Phonetic-Aware Encoder Tuning for L2 Korean ASR",
-      "summary": "Designed a robust ASR framework mitigating phonetic disruption in non-native Korean speech via LoRA-adapted Whisper encoder and auxiliary CTC-based phonetic supervision.",
-      "startDate": "2025-09-01",
-      "endDate": "2025-12-31",
-      "url": "https://drive.google.com/file/d/1kqZbzpuM9qS_IGhl1S0CaLlf8Dck-QxD/view?usp=sharing"
+      "name": "XXXXX",
+      "summary": "XXXX",
+      "startDate": "YYYY-MM-DD",
+      "endDate": "YYYY-MM-DD",
+      "url": "XXXX"
     }
   ],
   "honors and awards": [
     {
-      "title": "Best Paper Award (KISA President)",
-      "date": "2024",
-      "awarder": "KIISC Chungcheong Chapter Conference",
-      "summary": ""
-    },
-    {
-      "title": "Professor’s Scholarship (Half Tuition)",
-      "date": "2024",
-      "awarder": "School of Electronic Engineering, Soongsil University",
-      "summary": ""
-    },
-    {
-      "title": "Verity Award – Professor’s Scholarship (Quarter Tuition)",
-      "date": "2024",
-      "awarder": "Soongsil University",
-      "summary": ""
-    },
-    {
-      "title": "Academic Achievement Scholarship (Quarter Tuition)",
-      "date": "2021",
-      "awarder": "Soongsil University",
+      "title": "Academic Achievement Scholarship",
+      "date": "2019",
+      "awarder": "Materials Science and Engineering, Yonsei University",
       "summary": ""
     }
   ],
@@ -151,13 +126,13 @@
   ],
   "volunteer": [
     {
-      "organization": "Baird Volunteer Corp (BVC)",
+      "organization": "XXXX",
       "location": "Seoul, Republic of Korea",
       "position": "Member",
       "url": "",
-      "startDate": "2020-10-01",
-      "endDate": "2022-02-28",
-      "summary": "Contributed to community safety improvements through CCTV installation project with local police station, and participated in youth education volunteer programs.",
+      "startDate": "YYYY-MM-DD",
+      "endDate": "YYYY-MM-DD",
+      "summary": "XXXX",
       "highlights": []
     }
   ],
