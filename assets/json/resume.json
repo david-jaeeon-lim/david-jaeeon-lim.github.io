@@ -61,7 +61,7 @@
     {
       "name": "Nano Functional Material Laboratory (NFML)",
       "position": "M.S. Student",
-      "url": "",
+      "url": "https://nfml.yonsei.ac.kr/",
       "startDate": "",
       "endDate": "",
       "summary": "",
@@ -70,7 +70,7 @@
     {
       "name": "Nano Functional Material Laboratory (NFML)",
       "position": "Undergraduate Research Intern",
-      "url": "",
+      "url": "https://nfml.yonsei.ac.kr/",
       "startDate": "2023-09-01",
       "endDate": "2024-08-31",
       "summary": "",
@@ -161,29 +161,11 @@
       "highlights": []
     }
   ],
-  "interests": [
-    {
-      "name": "Watching Formula 1 (F1) races",
-      "icon": "fa-solid fa-car"
-    },
-    {
-      "name": "Playing the piano",
-      "icon": "fa-solid fa-piano"
-    },
-    {
-      "name": "Listening to Jazz music",
-      "icon": "fa-solid fa-music"
-    },
-    {
-      "name": "Baking cookies",
-      "icon": "fa-solid fa-cookie"
-    }
-  ],
   "references": [
     {
-      "name": "Jong-Seok Lee",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Jong-Seok Lee is a professor of computer science at Yonsei University. He is a co-author of the paper 'Dominating vs. Dominated: Generative Collapse in Diffusion Models'."
+      "name": "Jooho Moon",
+      "icon": "fa-solid fa-user-graduate",
+      "reference": "Professor, Department of Materials Science and Engineering, Yonsei University (advisor)."
     }
   ]
 }
